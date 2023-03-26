@@ -1,3 +1,3 @@
 ﻿using ProjectEuler;
 
-Problem2.Run();
+Problem3.Run();

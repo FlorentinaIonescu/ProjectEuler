@@ -15,28 +15,43 @@ namespace ProjectEuler
         public static void Run()
         {
 
-            // Define the number to factor
+            //// Define the number to factor
+            //long number = 600851475143;
+
+            //// Find the largest prime factor
+            //long largestFactor = GetLargestPrimeFactor(number);
+
+            //// Output the result
+            //Console.WriteLine("The largest prime factor of 600851475143 is: " + largestFactor);
+
             long number = 600851475143;
+            long largestFactor = 0;
 
-            // Find the largest prime factor
-            long largestFactor = GetLargestPrimeFactor(number);
-
-            // Output the result
-            Console.WriteLine("The largest prime factor of 600851475143 is: " + largestFactor);
-        }
-
-        // Recursive function to find the largest prime factor of a number
-        static long GetLargestPrimeFactor(long n)
-        {
-            for (long i = 2; i <= Math.Sqrt(n); i++)
+            for (long i = 2; i <= number; i++)
             {
-                if (n % i == 0)
+                while (number % i == 0)
                 {
-                    return Math.Max(i, GetLargestPrimeFactor(n / i));
+                    largestFactor = i;
+                    number /= i;
                 }
             }
-            return n;
+
+            Console.WriteLine($"The largest prime factor of 600851475143 is {largestFactor}");
+            Console.ReadLine();
         }
+
+        //// Recursive function to find the largest prime factor of a number
+        //static long GetLargestPrimeFactor(long n)
+        //{
+        //    for (long i = 2; i <= Math.Sqrt(n); i++)
+        //    {
+        //        if (n % i == 0)
+        //        {
+        //            return Math.Max(i, GetLargestPrimeFactor(n / i));
+        //        }
+        //    }
+        //    return n;
+        //}
     }
 
     // chatgpt

@@ -1,4 +1,6 @@
 ﻿using ProjectEuler;
 
 // TODO - solve Problem33 GCD going zero issue
-Problem40.Run();
+// TODO - solve Problem43 index out of bounds exception
+// TODO - solve Problem44 blank output
+Problem47.Run();

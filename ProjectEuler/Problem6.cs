@@ -11,8 +11,11 @@ namespace ProjectEuler
     {
         // ... Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
-        public static void Main()
+        public static void Run()
         {
+            // calculates the sum of squares and the square of sum of the first 100 natural numbers;
+            // then subtracts the former from the latter to find the difference between the sum of the squares and the square of the sum
+
             int sumOfSquares = 0;
             int squareOfSum = 0;
 
@@ -27,6 +30,7 @@ namespace ProjectEuler
             int result = squareOfSum - sumOfSquares;
 
             Console.WriteLine("The difference between the sum of the squares of the first 100 natural numbers and the square of the sum is: " + result);
+            Console.ReadLine();
         }
     }
 }

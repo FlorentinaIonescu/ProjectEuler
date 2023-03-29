@@ -12,6 +12,7 @@ namespace ProjectEuler
         // 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
         // What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
+        // brute force approach
 
         public static void Run()
         {
@@ -25,6 +26,10 @@ namespace ProjectEuler
         {
             int smallestMultiple = limit;
             bool found = false;
+
+            // checks each number between 1 and the limit to see if smallestMultiple is evenly divisible by it;
+            // if not, it increments smallestMultiple and starts over;
+            // if it is evenly divisible by all numbers between 1 and the limit, the program exits the loop and returns the value of smallestMultiple
 
             while (!found)
             {

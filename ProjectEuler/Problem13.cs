@@ -13,7 +13,7 @@ namespace ProjectEuler
     {
         // Work out the first ten digits of the sum of the following one-hundred 50-digit numbers....
 
-        static void Main()
+        public static void Run()
         {
             // Store the 100 50-digit numbers as strings in an array
             string[] numbers = new string[]
@@ -130,6 +130,7 @@ namespace ProjectEuler
             // Extract the first ten digits of the sum and print them
             string firstTenDigits = sum.ToString().Substring(0, 10);
             Console.WriteLine(firstTenDigits);
+            Console.ReadLine();
         }
     }
 }

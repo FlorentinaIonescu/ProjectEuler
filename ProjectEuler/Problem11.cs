@@ -12,7 +12,7 @@ namespace ProjectEuler
     {
         // ...What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
-        static void Main(string[] args)
+        public static void Run()
         {
             int[,] grid = new int[20, 20]; // Define the grid as a 20x20 array of integers
 

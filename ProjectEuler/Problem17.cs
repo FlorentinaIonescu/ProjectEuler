@@ -15,18 +15,21 @@ namespace ProjectEuler
         // If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
         // NOTE: Do not count spaces or hyphens.For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters.The use of "and" when writing out numbers is in compliance with British usage.
 
-        public static void Main()
+        public static void Run()
         {
             int sum = 0;
+            // loops through all numbers from 1 to 1000, gets their word representation, and adds the length of the word to the sum variable
             for (int i = 1; i <= 1000; i++)
             {
                 sum += GetNumberWord(i).Length;
             }
             Console.WriteLine(sum);
+            Console.ReadLine();
         }
 
-        public static string GetNumberWord(int number)
+        public static string GetNumberWord(int number) // returns the word representation of a given number
         {
+            // only returns the alphabetic characters for each number word
             if (number == 1000)
             {
                 return "onethousand";

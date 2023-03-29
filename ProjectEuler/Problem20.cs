@@ -13,14 +13,16 @@ namespace ProjectEuler
     {
         // Find the sum of the digits in the number 100!
 
-        static void Main(string[] args)
+        public static void Run()
         {
             BigInteger factorial = 1;
+            // multiplying each number from 1 to 100 together
             for (int i = 1; i <= 100; i++)
             {
                 factorial *= i;
             }
 
+            // iterate over each digit
             int digitSum = 0;
             foreach (char digit in factorial.ToString())
             {
@@ -28,6 +30,7 @@ namespace ProjectEuler
             }
 
             Console.WriteLine("The sum of the digits in 100! is: " + digitSum);
+            Console.ReadLine();
         }
     }
 }

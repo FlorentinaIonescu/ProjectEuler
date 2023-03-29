@@ -12,7 +12,7 @@ namespace ProjectEuler
     {
         // ...Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-        static void Main(string[] args)
+        public static void Run()
         {
             string series = "73167176531330624919225119674426574742355349194934" +
                             "96983520312774506326239578318016984801869478851843" +
@@ -38,6 +38,8 @@ namespace ProjectEuler
             int adjacentDigits = 13;
             long maxProduct = 0;
 
+            // loops through each possible set of adjacent digits, calculating the product of the digits in that set using a nested loop, and keeping track of the maximum product seen so far
+
             for (int i = 0; i < series.Length - adjacentDigits + 1; i++)
             {
                 long product = 1;
@@ -54,7 +56,7 @@ namespace ProjectEuler
             }
 
             Console.WriteLine("The greatest product of {0} adjacent digits in the series is {1}.", adjacentDigits, maxProduct);
+            Console.ReadLine();
         }
     }
-}
 }

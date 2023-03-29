@@ -13,7 +13,8 @@ namespace ProjectEuler
     {
         // What is the sum of the digits of the number 2(1000)?
 
-        static void Main()
+        // program uses the BigInteger class to compute 2^1000, and then iteratively sums up the digits of the resulting number
+        public static void Run()
         {
             BigInteger power = BigInteger.Pow(2, 1000);
             int sum = 0;
@@ -23,6 +24,7 @@ namespace ProjectEuler
                 power /= 10;
             }
             Console.WriteLine(sum);
+            Console.ReadLine();
         }
     }
 }

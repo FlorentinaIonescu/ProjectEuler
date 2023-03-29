@@ -12,8 +12,10 @@ namespace ProjectEuler
     {
         // Find the maximum total from top to bottom of the triangle...
 
-        public static void Main()
+        public static void Run()
         {
+            // define a two-dimensional integer array to represent the triangle given in the problem statement
+            // using nested arrays to prevent interpretation of comma-separated values in the array initialization as separate elements instead of as a single element
             int[][] triangle = new int[][] {
             new int[] {75},
             new int[] {95, 64},
@@ -30,10 +32,12 @@ namespace ProjectEuler
             new int[] {91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48},
             new int[] {63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31},
             new int[] {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23},
-        };
+            };
 
-            int rows = triangle.Length;
+            int rows = triangle.Length; // Length property of the triangle array returns the number of nested arrays (i.e. the number of rows)
 
+            // iterate through the rows of the triangle starting from the second-last row, and for each element in the row, we add the maximum of the two elements directly below it (i.e. in the row below it) to it.
+            // We repeat this process for all the elements in the row
             for (int i = rows - 2; i >= 0; i--)
             {
                 for (int j = 0; j <= i; j++)
@@ -43,6 +47,7 @@ namespace ProjectEuler
             }
 
             Console.WriteLine("The maximum sum from top to bottom of the triangle is: " + triangle[0][0]);
+            Console.ReadLine();
         }
     }
 }

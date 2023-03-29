@@ -12,7 +12,8 @@ namespace ProjectEuler
     {
         // ... Which starting number, under one million, produces the longest chain?
 
-        static void Main(string[] args)
+        // brute-force approach to find the starting number under one million that produces the longest Collatz sequence
+        public static void Run()
         {
             long maxLength = 0;
             long maxStartingNumber = 0;

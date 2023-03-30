@@ -17,9 +17,10 @@ namespace ProjectEuler
 
         public static void Run()
         {
-            List<int> primes = GeneratePrimes(10000);
+            List<int> primes = GeneratePrimes(10000); // it uses the Sieve of Eratosthenes to generate all prime numbers up to 10,000
             List<int> result = new List<int>();
 
+            // loops through all pairs of primes, looking for pairs that have a third prime in the sequence (i.e. the second prime plus the difference between the first and second primes)
             foreach (int prime1 in primes)
             {
                 foreach (int prime2 in primes.Where(p => p > prime1))
@@ -39,6 +40,7 @@ namespace ProjectEuler
             }
 
             Console.WriteLine(string.Join("", result.Select(n => n.ToString()).ToArray()));
+            Console.ReadLine();
         }
 
         static bool IsPermutation(int a, int b)
